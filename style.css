@@ -1,0 +1,165 @@
+*{
+	margin:0;
+	padding:0;
+	transition: transform 1s;
+}
+::selection{
+	color: #000;
+	background: yellow;
+}
+#container{
+	width: 100%;
+	height: 100vh;
+	background-image: url(images/back.png);
+	background-color: rgba(0, 0, 255, 0.55);
+	background-blend-mode: multiply;
+	background-position: center;
+	background-size: cover;
+}
+
+#navbar{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+}
+img{margin-top: 2%;margin-left:5%;margin-bottom:2%;}
+ul{margin-top: 2%;margin-right:10%;margin-bottom:2%;}
+ul{
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+ul li{
+	list-style: none;
+	margin: 2%;
+	color: white;
+	font-family: Arial;
+	font-size: 2vw;
+}
+
+ul li:hover{
+	font-weight:bolder;
+	text-decoration: underline solid red;
+	cursor: pointer;
+}
+
+/* #navbar:hover{
+	background:white;
+	transition: background 0.5s ease;
+} */
+#navbar:not(:hover){
+	background: transparent;
+	transition: background 0.5s ease;
+}
+#navbar:hover .nav-links{
+	color:white;
+}
+
+.nav-links:hover{
+	color: gold !important;
+}
+
+/* #navbar:hover h3{
+	color: crimson;
+}
+
+#navbar:hover i{
+	color: crimson;
+} */
+
+#menuBar:hover h3{
+	color: crimson;
+}
+
+#menuBar:hover i{
+	color: crimson;
+}
+
+#innerContainer{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+h1{
+	color: white;
+	font-size: 5.5vw;
+}
+span{
+	margin-left: 5%;
+	color: white;
+	margin-top: 3%;
+	font-family: Arial;
+	font-size: 3vw;
+}
+
+label{
+	font-size: 3vw;
+	margin: 2% 0;
+	position: absolute;
+	width: 40%;
+	margin-left: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* border: 1px dashed white; */
+}
+label span{
+	margin-left: 0;
+}
+#discoverMore{
+	color: gold;
+	text-decoration: underline solid gold;
+	cursor: pointer;
+}
+
+#menuBar{display: none;}
+
+@media only screen and (max-width:700px){
+	#navbar{
+		flex-direction: column;
+		height: fit-content;
+		justify-content: flex-start;
+		/* overflow: hidden; */
+	}
+	ul{
+		flex-direction: column;
+		margin: 0.2% 0;
+		/* display: none; */
+		width: 95%;
+		transform: translateY(-200%);
+		transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) ease 0.2s;
+	}
+	ul li{
+		margin: 0.2% 0;
+		font-size: 3.5vw;
+		width: 95%;
+		text-align: right;
+	}
+	img{
+		height: 8vh;
+	}
+	
+	#menuBar{
+		display: flex;
+		background-color: gold;
+		padding: 1.5% 4%;
+		outline: 0;
+		border: 0;
+		border-radius: 15px;
+		position: absolute;
+		top: 2.5%;
+		right: 3%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 15%;
+	}
+
+	h3{
+		color: #000;
+		font-size: 4vw;
+		font-family: 'Courier New', Courier, monospace;
+	}
+}
