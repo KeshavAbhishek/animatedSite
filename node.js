@@ -6,6 +6,7 @@ function onSelection(){
   if(window.innerWidth<=700){
   document.getElementById('listParent').style.transform='translateY(-200%)';
   document.getElementById('navbar').style.paddingBottom='0%';
+  document.getElementById('icon').style.transform='rotate(0deg)';
   }
 }
 function showNavLinks(){
